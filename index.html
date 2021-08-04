@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Shiatsu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge w3-animate-opacity">
+      <img width="150" src="public/img/logo.png" alt="Logo" />
+    </div>
+    <div class="w3-display-middle">
+      <h1 class="w3-jumbo w3-animate-top w3-center">Générateur d'image méridiens cheval</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <div class="w3-large w3-center">
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col l2 m3 s6">
+            <input id="vessie" class="w3-check" type="checkbox" name="meridians[]" value="vessie">
+            <label for="vessie">Vessie</label>
+          </div>
+
+          <div class="w3-col l2 m3 s6">
+            <input id="intestin-grele" class="w3-check" type="checkbox" name="meridians[]" value="intestin-grele">
+            <label for="intestin-grele">Intestin Grêle</label>
+          </div>
+        </div>
+
+        <button class="w3-btn w3-blue w3-round-xxlarge w3-margin-top w3-animate-opacity w3-animate-bottom save-button">Télécharger mon image</button>
+      </div>
+    </div>
+    <div class="w3-display-bottomleft w3-padding-large">
+      Image par 
+      <a href="https://pixabay.com/fr/users/jplenio-7645255/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3601004">jplenio</a> 
+      de 
+      <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3601004">Pixabay</a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/merge-images"></script>
+  <script src="public/js/download.min.js"></script>
+  <script src="public/js/script.js"></script>
+</body>
+</html>
