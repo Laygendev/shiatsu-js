@@ -1,4 +1,41 @@
 (function() {
+  let oldRandom = 0;
+  let currentBgImg = 0;
+  let oldBgImg
+
+  setInterval(() => {
+    let random;
+
+    do {
+      random = Math.floor(Math.random() * 4);
+    } while (random == oldRandom);
+
+    oldBgImg = currentBgImg
+
+    currentBgImg++;
+    if (currentBgImg > 1) {
+      currentBgImg = 0
+    }
+
+    document.querySelector('.bgimg' + currentBgImg).style.backgroundImage = "url('public/img/bg-" + random + ".jpg')";
+
+    document.querySelector('.bgimg' + currentBgImg).classList.remove('fadeOut');
+    document.querySelector('.bgimg' + currentBgImg).classList.add('fadeIn');
+    document.querySelector('.bgimg' + currentBgImg).addEventListener('animationend', (item) => {
+      item.target.hidden = false
+    });
+
+    oldRandom = random;
+
+    setTimeout(() => {
+      document.querySelector('.bgimg' + oldBgImg).classList.remove('fadeIn')
+      document.querySelector('.bgimg' + oldBgImg).classList.add('fadeOut');
+      document.querySelector('.bgimg' + oldBgImg).addEventListener('animationend', (item) => {
+        item.target.hidden = true
+      });
+    }, 500);
+
+  }, 10000);
   document.querySelector('.save-button').addEventListener('click', () => {
     let values = ['public/img/horse.png'];
 

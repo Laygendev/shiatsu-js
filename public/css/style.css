@@ -2,13 +2,77 @@ body, h1 {
   font-family: "Raleway", sans-serif
 }
 
-body, html {
+body {
   height: 100%;
+  position: relative;
+}
+
+.content {
+  min-height: 100%;
 }
 
 .bgimg {
-  background-image: url('../img/bg.jpg');
-  min-height: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.bgimg0, .bgimg1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-image: url('../img/bg-0.jpg');
   background-position: center;
   background-size: cover;
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut 1s forwards;
+  -moz-animation: fadeOut 1s forwards;
+  -o-animation: fadeOut 1s forwards;
+  animation: fadeOut 1s forwards;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 1s forwards;
+  -moz-animation: fadeIn 1s forwards;
+  -o-animation: fadeIn 1s forwards;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+@-o-keyframes fadeOut{
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+@-moz-keyframes fadeOut{
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+@-webkit-keyframes fadeOut{
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+
+
+@keyframes fadeIn {
+  0%   { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes fadeIn{
+  0%   { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes fadeIn{
+  0%   { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes fadeIn{
+  0%   { opacity:0; }
+  100% { opacity:1; }
 }
